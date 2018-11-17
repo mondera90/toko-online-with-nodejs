@@ -14,7 +14,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 //setup halaman index
 app.get('/', function(req, res){
-    res.send("ini adalah halaman index")     
+    res.send("ini adalah halaman index pertamaku hahahayy") 
 });
 
 
