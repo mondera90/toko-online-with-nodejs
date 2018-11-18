@@ -17,18 +17,16 @@ var app = express();
 
 //setup view engine for directory
 app.set("views", path.join(__dirname, "views"));
-app.set("views engine", "ejs");
+app.set("view engine", "ejs");
 
 //setup public folder
 app.use(express.static(path.join(__dirname, 'public')));
 
-//setup halaman index
-app.get('/', function(req, res){
-    res.send("ini adalah halaman index ini sudah konek ke mongodb") 
-});
+//set routes
+var pages = require('./routes/pages.js');
 
-
-
+//set redirect
+app.use('/', pages);
 
 //setup server
  var port = 8080;
