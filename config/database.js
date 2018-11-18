@@ -1,3 +1,3 @@
 module.exports={
-	database : 'mongodb://localhost/toko-online';
+	database : 'mongodb://localhost/toko-online'
 }
