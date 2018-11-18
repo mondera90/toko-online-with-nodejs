@@ -1,5 +1,15 @@
 var express = require("express");
-var path = require('path');
+var path = require("path");
+var mongoose = require("mongoose");
+
+
+//initial connect
+mongoose.connect("mongodb://localhost/toko_online");
+var db = mongoose.connection;
+db.on("error", console.error.bind(console, "connection error:"));
+db.once("open", function(){
+    console.log("sudah terhubung ke MongoDB");    
+});
 
 //initial apps
 var app = express();
@@ -14,7 +24,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 //setup halaman index
 app.get('/', function(req, res){
-    res.send("ini adalah halaman index pertamaku hahahayy") 
+    res.send("ini adalah halaman index ini sudah konek ke mongodb") 
 });
 
 
