@@ -7,6 +7,9 @@ router.get('/', function(req, res){
 	res.send('admin area')
 });
 
+router.get('/karyawan', function(req, res){
+	res.send('karyawan area')
+});
 
 
 //exports
