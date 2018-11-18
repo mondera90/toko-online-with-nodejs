@@ -5,6 +5,7 @@ var config = require("./config/database");
 var bodyParser = require("body-parser");
 var session = require("express-session");
 var expressValidator  = require("express-validator");
+var expressMessages = require("express-messages");
 
 
 
@@ -71,11 +72,11 @@ app.use(expressValidator({
 }));
 
 // Setup express messages middleware
-app.use(require('connect-flash')());
+/*app.use(require('connect-flash')());
 app.use(function (req, res, next) {
   res.locals.messages = require('express-messages')(req, res);
   next();
-});
+}); */
 
 
 //setup server
